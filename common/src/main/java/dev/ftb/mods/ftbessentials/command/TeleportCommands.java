@@ -44,7 +44,7 @@ public class TeleportCommands {
 
 	public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
 		if (FTBEConfig.BACK.isEnabled()) {
-			dispatcher.register(Commands.literal("back")
+			dispatcher.register(Commands.literal("ftbback")
 					.requires(FTBEConfig.BACK)
 					.executes(context -> back(context.getSource().getPlayerOrException()))
 			);

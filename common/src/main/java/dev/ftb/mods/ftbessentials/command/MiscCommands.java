@@ -108,11 +108,11 @@ public class MiscCommands {
 		}
 
 		if (FTBEConfig.REC.isEnabled()) {
-			dispatcher.register(literal("recording")
+			dispatcher.register(literal("ftbrecording")
 					.requires(FTBEConfig.REC)
 					.executes(context -> recording(context.getSource().getPlayerOrException()))
 			);
-			dispatcher.register(literal("streaming")
+			dispatcher.register(literal("ftbstreaming")
 					.requires(FTBEConfig.REC)
 					.executes(context -> streaming(context.getSource().getPlayerOrException()))
 			);

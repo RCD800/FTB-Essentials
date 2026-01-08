@@ -25,7 +25,7 @@ import java.util.Set;
 public class HomeCommands {
 	public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
 		if (FTBEConfig.HOME.isEnabled()) {
-			dispatcher.register(Commands.literal("home")
+			dispatcher.register(Commands.literal("ftbhome")
 					.requires(FTBEConfig.HOME)
 					.executes(context -> home(context.getSource().getPlayerOrException(), "home"))
 					.then(Commands.argument("name", StringArgumentType.greedyString())
@@ -33,14 +33,14 @@ public class HomeCommands {
 							.executes(context -> home(context.getSource().getPlayerOrException(), StringArgumentType.getString(context, "name")))
 					)
 			);
-			dispatcher.register(Commands.literal("sethome")
+			dispatcher.register(Commands.literal("ftbsethome")
 					.requires(FTBEConfig.HOME)
 					.executes(context -> setHome(context.getSource().getPlayerOrException(), "home"))
 					.then(Commands.argument("name", StringArgumentType.greedyString())
 							.executes(context -> setHome(context.getSource().getPlayerOrException(), StringArgumentType.getString(context, "name")))
 					)
 			);
-			dispatcher.register(Commands.literal("delhome")
+			dispatcher.register(Commands.literal("ftbdelhome")
 					.requires(FTBEConfig.HOME)
 					.executes(context -> delHome(context.getSource().getPlayerOrException(), "home"))
 					.then(Commands.argument("name", StringArgumentType.greedyString())
@@ -48,7 +48,7 @@ public class HomeCommands {
 							.executes(context -> delHome(context.getSource().getPlayerOrException(), StringArgumentType.getString(context, "name")))
 					)
 			);
-			dispatcher.register(Commands.literal("listhomes")
+			dispatcher.register(Commands.literal("ftblisthomes")
 					.requires(FTBEConfig.HOME)
 					.executes(context -> listHomes(context.getSource(), context.getSource().getPlayerOrException().getGameProfile()))
 					.then(Commands.argument("player", GameProfileArgument.gameProfile())
