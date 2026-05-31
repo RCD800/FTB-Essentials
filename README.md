@@ -1,3 +1,1 @@
-# FTB Essentials
-
-Use https://github.com/FTBTeam/FTB-Mods-Issues for any mod issues
+Fork com alteração no prefixos dos comandos do FTB Essentials para evitar conflitos.
